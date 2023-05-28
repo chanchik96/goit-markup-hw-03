@@ -106,11 +106,7 @@ img {
 .card-list {
   display: flex;
   justify-content: center;
-  gap: 48px 24px;
-}
-
-.card-item img {
-  margin-bottom: 32px;
+  gap: 24px;
 }
 
 /* ===== HEADER ===== */
@@ -132,7 +128,6 @@ img {
 .navbar {
   display: flex;
   align-items: center;
-  gap: 76px;
 }
 
 .nav-list {
@@ -153,6 +148,7 @@ img {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--iris-color);
+  margin-right: 76px;
 }
 
 .header .logo-span {
@@ -203,7 +199,7 @@ img {
   font-size: 56px;
   line-height: 1.07;
   letter-spacing: 0.02em;
-  text-align: center;
+  /* text-align: center; */
 
   color: var(--white-color);
   max-width: 496px;
@@ -215,9 +211,13 @@ img {
   color: var(--white-color);
   background-color: var(--iris-color);
   cursor: pointer;
-  padding: 16px 32px;
   border: none;
   border-radius: 4px;
+  min-width: 169px;
+  height: 56px;
+
+  display: block;
+  margin: 0 auto;
 }
 
 .hero-btn:is(:hover, :focus) {
@@ -226,8 +226,8 @@ img {
 
 /* ===== Advantages section ===== */
 
-.features {
-  padding-bottom: 60px;
+.visually-hidden {
+  display: none;
 }
 
 .features-list .item {
@@ -264,16 +264,31 @@ img {
 }
 
 .our-team-list .item {
-  text-align: center;
-  padding-bottom: 32px;
   border-radius: 0 0 4px 4px;
   flex-basis: calc((100% - 3 * 24px) / 4);
+}
+
+.our-team-list .wrapper {
+  padding: 32px 16px;
+}
+
+.our-team-list .item-title {
+  text-align: center;
+}
+
+.our-team-list .text {
+  text-align: center;
 }
 
 /* ===== FOOTER ===== */
 
 .footer {
-  padding: 100px 15px;
+  padding: 100px 0;
+}
+
+.footer .logo {
+  display: inline-block;
+  margin-bottom: 16px;
 }
 
 .footer .logo-span {
@@ -283,10 +298,9 @@ img {
 .footer .text {
   color: var(--cloud-color);
   max-width: 264px;
-  margin-top: 16px;
 }
 
-/* ===== PORTFOLOP Page ===== */
+/* ===== PORTFOLIO Page ===== */
 
 .button-list {
   display: flex;
@@ -307,7 +321,7 @@ img {
   color: var(--iris-color);
   background-color: var(--cloud-color);
   padding: 12px 24px;
-  border: none;
+  border: 1px solid var(--cornflower-color);
   border-radius: 4px;
   cursor: pointer;
 }
@@ -315,10 +329,15 @@ img {
 .portfolio .list .button:is(:hover, :focus) {
   color: var(--white-color);
   background-color: var(--ocean-color);
+  border: 1px solid transparent;
 }
 
 .portfolio .card-list {
   flex-wrap: wrap;
+}
+
+.portfolio .wrapper {
+  padding: 32px 16px;
 }
 
 .portfolio .card-item {
