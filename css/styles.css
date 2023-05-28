@@ -153,9 +153,6 @@ img {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--iris-color);
-
-  /* display: flex;
-  align-items: center; */
 }
 
 .header .logo-span {
