@@ -122,11 +122,16 @@ img {
 .header .container {
   display: flex;
   align-items: center;
-  padding: 24px 15px;
+}
+
+.header a {
+  display: inline-block;
+  padding: 24px 0;
 }
 
 .navbar {
   display: flex;
+  align-items: center;
   gap: 76px;
 }
 
@@ -209,7 +214,7 @@ img {
   margin-bottom: 48px;
 }
 
-.hero .button {
+.hero-btn {
   color: var(--white-color);
   background-color: var(--iris-color);
   cursor: pointer;
@@ -218,7 +223,7 @@ img {
   border-radius: 4px;
 }
 
-.hero .button:is(:hover, :focus) {
+.hero-btn:is(:hover, :focus) {
   background-color: var(--ocean-color);
 }
 
