@@ -23,7 +23,8 @@ body {
 h1,
 h2,
 h3,
-p {
+p,
+a {
   margin: 0;
   padding: 0;
 }
@@ -50,6 +51,11 @@ img {
   margin: 0 auto;
   padding-left: 15px;
   padding-right: 15px;
+}
+
+.section {
+  padding-top: 120px;
+  padding-bottom: 120px;
 }
 
 .button {
@@ -81,7 +87,7 @@ img {
   margin-bottom: 72px;
 }
 
-.list-item-title {
+.card-title {
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
@@ -97,6 +103,16 @@ img {
   letter-spacing: 0.02em;
 }
 
+.card-list {
+  display: flex;
+  justify-content: center;
+  gap: 48px 24px;
+}
+
+.card-item img {
+  margin-bottom: 32px;
+}
+
 /* ===== HEADER ===== */
 
 .header {
@@ -105,6 +121,7 @@ img {
 
 .header .container {
   display: flex;
+  align-items: center;
   padding: 24px 15px;
 }
 
@@ -127,10 +144,13 @@ img {
   font-family: "Raleway", sans-serif;
   font-weight: 800;
   font-size: 18px;
-  line-height: 1.17;
+  line-height: 1.27;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--iris-color);
+
+  /* display: flex;
+  align-items: center; */
 }
 
 .header .logo-span {
@@ -164,9 +184,8 @@ img {
 
 /* ===== MAIN ===== */
 
-.section {
-  padding-top: 120px;
-  padding-bottom: 120px;
+.navy-blue-bg {
+  background-color: var(--navy-blue-color);
 }
 
 .hero {
@@ -190,10 +209,6 @@ img {
   margin-bottom: 48px;
 }
 
-.navy-blue-bg {
-  background-color: var(--navy-blue-color);
-}
-
 .hero .button {
   color: var(--white-color);
   background-color: var(--iris-color);
@@ -209,21 +224,12 @@ img {
 
 /* ===== Advantages section ===== */
 
-.advantages {
+.features {
   padding-bottom: 60px;
 }
 
-.feature-list {
-  display: flex;
-  gap: 24px;
-}
-
-.feature-list .item {
-  width: 264px;
-}
-
-.advantages .text {
-  color: var(--slate-color);
+.features-list .item {
+  width: calc((100% - 3 * 24px) / 4);
 }
 
 /* ===== What we are doing section ===== */
@@ -235,6 +241,10 @@ img {
 .projects-list {
   display: flex;
   gap: 24px;
+}
+
+.projects-list .item {
+  width: calc((100% - 2 * 24px) / 3);
 }
 
 .projects .text {
@@ -251,19 +261,11 @@ img {
   background-color: var(--white-color);
 }
 
-.our-team-list {
-  display: flex;
-  gap: 24px;
-}
-
 .our-team-list .item {
   text-align: center;
   padding-bottom: 32px;
   border-radius: 0 0 4px 4px;
-}
-
-.our-team-list .item img {
-  margin-bottom: 32px;
+  width: calc((100% - 3 * 24px) / 4);
 }
 
 /* ===== FOOTER ===== */
@@ -313,26 +315,12 @@ img {
   background-color: var(--ocean-color);
 }
 
-.card-list {
-  display: flex;
-  justify-content: center;
-  gap: 48px 24px;
-}
-
-.portfolio .list {
+.portfolio .card-list {
   flex-wrap: wrap;
 }
 
-.card-list .item {
+.portfolio .card-item {
   width: calc((100% - 48px) / 3);
-}
-
-.portfolio .card-title {
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 1.2;
-  letter-spacing: 0.02em;
-  color: var(--navy-blue-color);
 }
 
 .portfolio .card-text {
